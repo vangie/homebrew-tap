@@ -10,7 +10,7 @@ class ZspaceCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_darwin_amd64.tar.gz"
-      sha256 "29713dae293343aaa8b70bd40bb01a0465d6ee44f220db3d8b9b6a29b09421b5"
+      sha256 "7fd2e5a2305545eff85b3fb0145845c86326215c1d40d491c2fd9cf57af497f0"
 
       def install
         bin.install "zspace"
@@ -19,7 +19,7 @@ class ZspaceCli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_darwin_arm64.tar.gz"
-      sha256 "58901fbf939cf9755bc213fce9bb6796fc406c5833bd129221113bd5b46d3b15"
+      sha256 "59cf9ab763f0ba075c1f097d2fcd3140a6131161c19bb307c548da9a7e7fe8b9"
 
       def install
         bin.install "zspace"
@@ -31,7 +31,7 @@ class ZspaceCli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_linux_amd64.tar.gz"
-      sha256 "baab25e82631799d4d1f17e7dbd94cb346c60891cf64ae657daf61a0169ee457"
+      sha256 "e7abbcb72655998cb24965e11cfa35e9c8bc0c32134ca84e490aad1b5dc02c9a"
       def install
         bin.install "zspace"
         bin.install "zspace-mcp"
@@ -39,7 +39,7 @@ class ZspaceCli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_linux_arm64.tar.gz"
-      sha256 "e374e331c5e6b503de2eb4c9d09949af71e827627785a23988937cf6e59335e6"
+      sha256 "819815207c994f72b70ce0eb0d7a3db07c7fb33e778764dbcd0932f0cde18ae5"
       def install
         bin.install "zspace"
         bin.install "zspace-mcp"
