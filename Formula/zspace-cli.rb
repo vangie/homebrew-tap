@@ -10,18 +10,18 @@ class ZspaceCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_darwin_amd64.tar.gz"
-      sha256 "7fd2e5a2305545eff85b3fb0145845c86326215c1d40d491c2fd9cf57af497f0"
+      sha256 "03f22a3bfc8a702b88224acc58581f7771c7f28eb35b12d1b69de3d5b6d8f8bb"
 
-      def install
+      define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_darwin_arm64.tar.gz"
-      sha256 "59cf9ab763f0ba075c1f097d2fcd3140a6131161c19bb307c548da9a7e7fe8b9"
+      sha256 "6e1a96130cf831a842996845313ade78f8cd3fe56214290e3533ba1d3e353225"
 
-      def install
+      define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
       end
@@ -31,16 +31,16 @@ class ZspaceCli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_linux_amd64.tar.gz"
-      sha256 "e7abbcb72655998cb24965e11cfa35e9c8bc0c32134ca84e490aad1b5dc02c9a"
-      def install
+      sha256 "41adf1795d3032ee19ac1a179dcd88645061476ec4b24a1186382da30c3bb1b3"
+      define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vangie/zspace-cli/releases/download/v0.1.1/zspace_0.1.1_linux_arm64.tar.gz"
-      sha256 "819815207c994f72b70ce0eb0d7a3db07c7fb33e778764dbcd0932f0cde18ae5"
-      def install
+      sha256 "cbace2486f2c0b550c87270f727723db66d1db056e270bb4ad1bf8f50fd60a53"
+      define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
       end
@@ -48,6 +48,6 @@ class ZspaceCli < Formula
   end
 
   test do
-    system "#{bin}/zspace version"
+    system "#{bin}/zspace", "version"
   end
 end
