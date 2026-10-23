@@ -5,12 +5,12 @@
 class ZspaceCli < Formula
   desc "极空间 NAS 的命令行与 MCP 服务"
   homepage "https://github.com/vangie/zspace-cli"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.2/zspace_0.1.2_darwin_amd64.tar.gz"
-      sha256 "e240ad86a9356801e2d0b4b24df983dcb7d252538128ceb5c154d5a645a08c65"
+      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.3/zspace_0.1.3_darwin_amd64.tar.gz"
+      sha256 "dc75bde8e25c2ed3b4c8778fccdf48300dd449b10197226f84410ab71558ab94"
 
       define_method(:install) do
         bin.install "zspace"
@@ -18,8 +18,8 @@ class ZspaceCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.2/zspace_0.1.2_darwin_arm64.tar.gz"
-      sha256 "bcb9579321dbbafb6b2b76e8de0f849d379438bf994c828c8d35169456ed37c5"
+      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.3/zspace_0.1.3_darwin_arm64.tar.gz"
+      sha256 "91dab7aa1d571ecd3503de08c9093d01d1c34ba816574b55555ea869e0e2de3f"
 
       define_method(:install) do
         bin.install "zspace"
@@ -30,16 +30,16 @@ class ZspaceCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.2/zspace_0.1.2_linux_amd64.tar.gz"
-      sha256 "4bca30149f603029c95b61240701d8ec6c5312320cd6abc4e3755c1d440be431"
+      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.3/zspace_0.1.3_linux_amd64.tar.gz"
+      sha256 "b62f1c65564797e0b6c8359b2d5cd9ca90b42fb59cd87ae1b9889e390ee43543"
       define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.2/zspace_0.1.2_linux_arm64.tar.gz"
-      sha256 "e3b8225b30784b21e156f64682f08e3dbda297e34502d99e3fb42ac114d59541"
+      url "https://github.com/vangie/zspace-cli/releases/download/v0.1.3/zspace_0.1.3_linux_arm64.tar.gz"
+      sha256 "7a0dea4f712956ca2b17205eb1d4542c9611edf5daa85f991c68e3ad94cd48af"
       define_method(:install) do
         bin.install "zspace"
         bin.install "zspace-mcp"
